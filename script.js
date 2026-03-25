@@ -145,3 +145,30 @@ function updateFooter() {
 
   clearBtn.style.visibility = completed > 0 ? 'visible' : 'hidden';
 }
+
+// ── Warning ──────────────────────────────────────────────────
+
+function showWarning() {
+  warning.classList.remove('hidden');
+  input.style.borderColor = 'var(--accent)';
+  input.focus();
+}
+
+function hideWarning() {
+  warning.classList.add('hidden');
+  input.style.borderColor = '';
+}
+
+// ── localStorage ─────────────────────────────────────────────
+
+function saveTasks() {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+function loadTasks() {
+  try {
+    return JSON.parse(localStorage.getItem('tasks')) || [];
+  } catch {
+    return [];
+  }
+}
