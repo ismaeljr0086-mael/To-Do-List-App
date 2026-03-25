@@ -7,7 +7,7 @@
   --border:    #e2ddd4;
   --accent:    #c45c2e;
   --accent-h:  #a84b24;
-  --text:      #1a1714;
+  --text:      #000000;
   --muted:     #7a746c;
   --done-text: #aaa49c;
   --shadow:    0 4px 24px rgba(0,0,0,0.08);
@@ -94,7 +94,7 @@ h1 {
   --border:    #e2ddd4;
   --accent:    #c45c2e;
   --accent-h:  #a84b24;
-  --text:      #1a1714;
+  --text:      #000000;
   --muted:     #7a746c;
   --done-text: #aaa49c;
   --shadow:    0 4px 24px rgba(0,0,0,0.08);
