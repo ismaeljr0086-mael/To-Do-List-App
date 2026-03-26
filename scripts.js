@@ -56,13 +56,13 @@ function addTask(text) {
 function toggleTask(id) {
   tasks = tasks.map(t => t.id === id ? { ...t, done: !t.done } : t);
   saveTasks();
-  const item = document.querySelector([data-id="${id}"]);
+  const item = document.querySelector(`[data-id="${id}"]`);
   if (item) item.classList.toggle('done', tasks.find(t => t.id === id).done);
   updateFooter();
 }
 
 function deleteTask(id) {
-  const item = document.querySelector([data-id="${id}"]);
+  const item = document.querySelector(`[data-id="${id}"]`);
   if (item) {
     item.style.animation = 'none';
     item.style.opacity = '0';
@@ -141,7 +141,7 @@ function updateFooter() {
   footer.classList.remove('hidden');
   taskCount.textContent = remaining === 0
     ? 'All done 🎉'
-    : ${remaining} task${remaining !== 1 ? 's' : ''} remaining;
+    : `${remaining} task${remaining !== 1 ? 's' : ''} remaining`;
 
   clearBtn.style.visibility = completed > 0 ? 'visible' : 'hidden';
 }
